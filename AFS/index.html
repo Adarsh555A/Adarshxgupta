@@ -72,77 +72,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script>
-    let btnbook = document.querySelector('.btn-outline-danger').addEventListener("click", function (){
-        let a =prompt("Enter your password: ");
-if(a === "Adarsh555"){
-  data('book')
-}else{
-    document.querySelector(".site").style.display = "none";
-    document.write("You are hacked sending.. your ip address to hacker");
 
-}
-    })
-
-    let btnassign = document.querySelector('.btn-outline-primary').addEventListener("click", function (){
-        let a =prompt("Enter your password: ");
-if(a === "Adarsh555"){
-  data('Assign')
-}else{
-    document.querySelector(".site").style.display = "none";
-    document.write("You are hacked sending.. your ip address to hacker");
-
-}
-    });
-
-function data(res){
-if(res === "book"){
-console.log('hi');
-let eles = document.querySelector('.row-cols-md-3');
-eles.innerHTML = "";
-fetch("data.json").then((res)=> res.json()).then(response => {
-  console.log(response.length)
-  for (let i = 0; i < response.length; i++) {
-    let elements = `
-      <div class="col">
-          <div class="card  m-2">
-            <img src="https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif" class="card-img-top" alt="https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif">
-            <div class="card-body">
-              <h5 class="card-title center">${response[i].subject_name}</h5>
-              <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
-            </div>
-          </div>
-        </div>
-    
-    `;
-     eles.innerHTML += elements;
-  }
-
-}).catch((err)=>{console.log(err)})
-}
-if(res === "Assign"){
-console.log('hello');
-let eles = document.querySelector('.row-cols-md-3');
-eles.innerHTML = "";
-fetch("data.json").then((res)=> res.json()).then(response => {
-  console.log(response.length)
-  for (let i = 0; i < response.length; i++) {
-    let elements = `
-      <div class="col">
-          <div class="card  m-2">
-            <img src="https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif" class="card-img-top" alt="https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif">
-            <div class="card-body">
-              <h5 class="card-title center">${response[i].subject_name}</h5>
-              <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
-            </div>
-          </div>
-        </div>
-    
-    `;
-     eles.innerHTML += elements;
-  }
-}
-).catch((err)=>{console.log(err)})
-}
-}
+function _0x3e13(){const _0x17fcbf=['Assign','log','479172nyBBxL','Enter\x20your\x20password:\x20','style','none','\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22col\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x20\x20m-2\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22\x20class=\x22card-img-top\x22\x20alt=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-body\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h5\x20class=\x22card-title\x20center\x22>','242FnahGI','json','ctrlKey','420JWLILk','33630STKQvL','preventDefault','platform','.btn-outline-danger','then','match','You\x20are\x20hacked\x20sending..\x20your\x20ip\x20address\x20to\x20hacker','write','querySelector','innerHTML','</h5>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20<p\x20class=\x22card-text\x22>This\x20is\x20a\x20longer\x20card\x20with\x20supporting\x20text\x20below\x20as\x20a\x20natural\x20lead-in\x20to\x20additional\x20content.\x20This\x20content\x20is\x20a\x20little\x20bit\x20longer.</p>\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20','catch','data.json','display','subject_name','19818TPKbRz','keydown','hello','30XdrcXQ','119404vgujRP','5673943KFKDfk','metaKey','351oYnaMm','.row-cols-md-3','.btn-outline-primary','689288iBpKgA','click','12hCTwLH','.site','454KdCbtX','addEventListener','length','Mac','book','6351098513'];_0x3e13=function(){return _0x17fcbf;};return _0x3e13();}const _0x3b8c31=_0x13de;function _0x13de(_0x506fef,_0x37935f){const _0x3e130e=_0x3e13();return _0x13de=function(_0x13dec1,_0x2bc5f5){_0x13dec1=_0x13dec1-0xf4;let _0x520a96=_0x3e130e[_0x13dec1];return _0x520a96;},_0x13de(_0x506fef,_0x37935f);}(function(_0x3b9b58,_0x116b2c){const _0x57382f=_0x13de,_0x472244=_0x3b9b58();while(!![]){try{const _0x297c37=-parseInt(_0x57382f(0x11d))/0x1*(parseInt(_0x57382f(0xfc))/0x2)+parseInt(_0x57382f(0xf7))/0x3+-parseInt(_0x57382f(0x113))/0x4*(parseInt(_0x57382f(0x112))/0x5)+-parseInt(_0x57382f(0x10f))/0x6*(parseInt(_0x57382f(0xff))/0x7)+parseInt(_0x57382f(0x119))/0x8+parseInt(_0x57382f(0x116))/0x9*(-parseInt(_0x57382f(0x100))/0xa)+-parseInt(_0x57382f(0x114))/0xb*(-parseInt(_0x57382f(0x11b))/0xc);if(_0x297c37===_0x116b2c)break;else _0x472244['push'](_0x472244['shift']());}catch(_0x467ada){_0x472244['push'](_0x472244['shift']());}}}(_0x3e13,0x306b1),window[_0x3b8c31(0x11e)]('contextmenu',function(_0x1fa1ee){const _0x315b50=_0x3b8c31;_0x1fa1ee[_0x315b50(0x101)]();}),document['addEventListener'](_0x3b8c31(0x110),function(_0x1b9223){const _0x32ec61=_0x3b8c31;_0x1b9223['keyCode']==0x55&&(navigator[_0x32ec61(0x102)][_0x32ec61(0x105)](_0x32ec61(0x120))?_0x1b9223[_0x32ec61(0x115)]:_0x1b9223[_0x32ec61(0xfe)])&&_0x1b9223[_0x32ec61(0x101)]();}));let btnbook=document[_0x3b8c31(0x108)](_0x3b8c31(0x103))[_0x3b8c31(0x11e)]('click',function(){const _0x16c7f2=_0x3b8c31;let _0x521bd6=prompt(_0x16c7f2(0xf8));_0x521bd6===_0x16c7f2(0xf4)?data(_0x16c7f2(0x121)):(document[_0x16c7f2(0x108)](_0x16c7f2(0x11c))[_0x16c7f2(0xf9)][_0x16c7f2(0x10d)]=_0x16c7f2(0xfa),document[_0x16c7f2(0x107)](_0x16c7f2(0x106)));}),btnassign=document['querySelector'](_0x3b8c31(0x118))['addEventListener'](_0x3b8c31(0x11a),function(){const _0x4f1d91=_0x3b8c31;let _0x33398c=prompt('Enter\x20your\x20password:\x20');_0x33398c==='6351098513'?data('Assign'):(document[_0x4f1d91(0x108)]('.site')['style'][_0x4f1d91(0x10d)]=_0x4f1d91(0xfa),document['write'](_0x4f1d91(0x106)));});function data(_0x180147){const _0x2cf7ac=_0x3b8c31;if(_0x180147===_0x2cf7ac(0x121)){console[_0x2cf7ac(0xf6)]('hi');let _0x6e08e6=document[_0x2cf7ac(0x108)](_0x2cf7ac(0x117));_0x6e08e6['innerHTML']='',fetch(_0x2cf7ac(0x10c))[_0x2cf7ac(0x104)](_0x272602=>_0x272602['json']())[_0x2cf7ac(0x104)](_0x34a263=>{const _0x5b8361=_0x2cf7ac;console['log'](_0x34a263[_0x5b8361(0x11f)]);for(let _0x3b28da=0x0;_0x3b28da<_0x34a263[_0x5b8361(0x11f)];_0x3b28da++){let _0xe893da=_0x5b8361(0xfb)+_0x34a263[_0x3b28da][_0x5b8361(0x10e)]+_0x5b8361(0x10a);_0x6e08e6[_0x5b8361(0x109)]+=_0xe893da;}})[_0x2cf7ac(0x10b)](_0x47978a=>{console['log'](_0x47978a);});}if(_0x180147===_0x2cf7ac(0xf5)){console[_0x2cf7ac(0xf6)](_0x2cf7ac(0x111));let _0x329187=document[_0x2cf7ac(0x108)](_0x2cf7ac(0x117));_0x329187['innerHTML']='',fetch(_0x2cf7ac(0x10c))[_0x2cf7ac(0x104)](_0x139665=>_0x139665[_0x2cf7ac(0xfd)]())[_0x2cf7ac(0x104)](_0x5b514b=>{const _0x59a858=_0x2cf7ac;console[_0x59a858(0xf6)](_0x5b514b[_0x59a858(0x11f)]);for(let _0x3434bd=0x0;_0x3434bd<_0x5b514b[_0x59a858(0x11f)];_0x3434bd++){let _0x92b863='\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22col\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x20\x20m-2\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22\x20class=\x22card-img-top\x22\x20alt=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-body\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h5\x20class=\x22card-title\x20center\x22>'+_0x5b514b[_0x3434bd][_0x59a858(0x10e)]+'</h5>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20<p\x20class=\x22card-text\x22>This\x20is\x20a\x20longer\x20card\x20with\x20supporting\x20text\x20below\x20as\x20a\x20natural\x20lead-in\x20to\x20additional\x20content.\x20This\x20content\x20is\x20a\x20little\x20bit\x20longer.</p>\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20';_0x329187[_0x59a858(0x109)]+=_0x92b863;}})['catch'](_0x39541f=>{const _0x4593a8=_0x2cf7ac;console[_0x4593a8(0xf6)](_0x39541f);});}}
 </script>
 </html>
