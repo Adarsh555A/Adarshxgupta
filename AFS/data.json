@@ -3,24 +3,18 @@
         "id":"1",
         "subject_name":"mathesmatics",
         "image":"",
-        "AFS_url":""
+        "AFS_url":"https://drive.google.com/drive/folders/1NkNHFJXDU5NYbQJI9z-zCpA1LqSNj20o?usp=sharing"
     },
     {
         "id":"2",
-        "subject_name":"mathesmatics",
+        "subject_name":"BKS",
         "image":"",
-        "AFS_url":""
+        "AFS_url":"https://drive.google.com/drive/folders/1B26hKF1WBfqXfhY0tuN93SZngwA4KvLh?usp=sharing"
     },
     {
         "id":"3",
-        "subject_name":"mathesmatics",
+        "subject_name":"DPA",
         "image":"",
-        "AFS_url":""
-    },
-    {
-        "id":"4",
-        "subject_name":"mathesmatics",
-        "image":"",
-        "AFS_url":""
+        "AFS_url":"https://drive.google.com/drive/folders/1ssDWpeDyDa6R_6GEAn4sgFvW2YHCNVAk?usp=sharing"
     }
 ]
