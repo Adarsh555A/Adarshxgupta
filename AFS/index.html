@@ -7,24 +7,48 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <style>
- 
+ .uploads{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  top: 94%;
+  background-color: rgba(250, 235, 215, 0.301);
+  position: fixed;
+ }
 </style>
 <body>
     <main class="site">
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand d-flex" href="#">
-            <img src="https://adarsh555a.github.io/Adarsh-gupta/happy/logo-removebg-preview.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
-            <h3 class="m-2">AFS</h3>
+     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex" >
+      <img src="https://adarsh555a.github.io/Adarsh-gupta/happy/logo-removebg-preview.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
+      <h3 class="m-2">AFS</h3>
 
-          </a>
-        </div>
-      </nav>
+    </a>
+        <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>      </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" id="pdf">
+          <a class="nav-link" aria-current="page" >pdf's</a>
+        </li>
+        <li class="nav-item" id="pdf">
+          <a class="nav-link" aria-current="page" >Imp's</a>
+        </li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+   
     <div class="container m-4">
         <img src="https://acegif.com/wp-content/uploads/gifs/book-38.gif" class="img-thumbnail mx-auto d-block mb-4" alt="Cinque Terre">
 
         <div class="content d-flex justify-content-center">
-        <button type="button" class="btn btn-outline-danger m-2">Book pdf</button>
+        <button type="button" class="btn btn-outline-danger m-2" >Book pdf</button>
         <button type="button" class="btn btn-outline-primary m-2">Assignment Pdf</button>
     </div>
 </div>
@@ -68,11 +92,45 @@
           </div> -->
         </div>
       </div>
+      <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <form class="modal-content" method="post" id="form">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Upload file</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Gdrive</span>
+                <input type="text" name="gdrive" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">File name</span>
+                <input type="text" name="fn" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Unname</span>
+                <input type="text" name="uname" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" id="sumbitted" class="btn btn-primary" >submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="uploads">
+        <svg xmlns="http://www.w3.org/2000/svg" data-bs-toggle="modal" data-bs-target="#staticBackdrop" width="50" height="50" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+        </svg>
+      </div>
     </main>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script>
 
-function _0x279a(_0x1c3dc0,_0x3afffb){const _0x3188d6=_0x3188();return _0x279a=function(_0x279af5,_0x5368c3){_0x279af5=_0x279af5-0x7b;let _0x15a47a=_0x3188d6[_0x279af5];return _0x15a47a;},_0x279a(_0x1c3dc0,_0x3afffb);}function _0x3188(){const _0x2f0d96=['json','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x20\x20m-2\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22\x20class=\x22card-img-top\x22\x20alt=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-body\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h5\x20class=\x22card-title\x20center\x22\x20style=\x22text-decoration:\x20none;\x22>','none','keyCode','match','click','.site','.btn-outline-primary','subject_name','log','1778744gFCnNz','6351098513','27164OFksJb','30UxrnCg','589754PvinvP','catch','</h5>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20<p\x20class=\x22card-text\x22>This\x20is\x20a\x20longer\x20card\x20with\x20supporting\x20text\x20below\x20as\x20a\x20natural\x20lead-in\x20to\x20additional\x20content.\x20This\x20content\x20is\x20a\x20little\x20bit\x20longer.</p>\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20','You\x20are\x20hacked\x20sending..\x20your\x20ip\x20address\x20to\x20hacker','querySelector','6VBrBtO','Assign','write','.row-cols-md-3','metaKey','ctrlKey','28028hAkKte','innerHTML','\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22col\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x20\x20m-2\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22\x20class=\x22card-img-top\x22\x20alt=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-body\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h5\x20class=\x22card-title\x20center\x22\x20>','</h5>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20<p\x20class=\x22card-text\x22>This\x20is\x20a\x20longer\x20card\x20with\x20supporting\x20text\x20below\x20as\x20a\x20natural\x20lead-in\x20to\x20additional\x20content.\x20This\x20content\x20is\x20a\x20little\x20bit\x20longer.</p>\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20','432834liOmlP','Enter\x20your\x20password:\x20','2895561FjPjbf','Mac','data.json','book','style','length','115348ggbYeR','then','addEventListener','10FbKlzF'];_0x3188=function(){return _0x2f0d96;};return _0x3188();}const _0x649dc8=_0x279a;(function(_0x4f7e15,_0x52a023){const _0x29b4b4=_0x279a,_0x450f09=_0x4f7e15();while(!![]){try{const _0x4ebc51=-parseInt(_0x29b4b4(0x85))/0x1+-parseInt(_0x29b4b4(0x97))/0x2+-parseInt(_0x29b4b4(0x9c))/0x3*(parseInt(_0x29b4b4(0x95))/0x4)+parseInt(_0x29b4b4(0x88))/0x5*(-parseInt(_0x29b4b4(0x7d))/0x6)+-parseInt(_0x29b4b4(0xa2))/0x7+-parseInt(_0x29b4b4(0x93))/0x8+parseInt(_0x29b4b4(0x7f))/0x9*(parseInt(_0x29b4b4(0x96))/0xa);if(_0x4ebc51===_0x52a023)break;else _0x450f09['push'](_0x450f09['shift']());}catch(_0x5e78cf){_0x450f09['push'](_0x450f09['shift']());}}}(_0x3188,0x29b03),window[_0x649dc8(0x87)]('contextmenu',function(_0x1bfc84){_0x1bfc84['preventDefault']();}),document[_0x649dc8(0x87)]('keydown',function(_0x58822f){const _0x378a79=_0x649dc8;_0x58822f[_0x378a79(0x8c)]==0x55&&(navigator['platform'][_0x378a79(0x8d)](_0x378a79(0x80))?_0x58822f[_0x378a79(0xa0)]:_0x58822f[_0x378a79(0xa1)])&&_0x58822f['preventDefault']();}));let btnbook=document[_0x649dc8(0x9b)]('.btn-outline-danger')[_0x649dc8(0x87)](_0x649dc8(0x8e),function(){const _0x2d57a1=_0x649dc8;let _0x32732=prompt(_0x2d57a1(0x7e));_0x32732===_0x2d57a1(0x94)?data(_0x2d57a1(0x82)):(document[_0x2d57a1(0x9b)]('.site')[_0x2d57a1(0x83)]['display']=_0x2d57a1(0x8b),document[_0x2d57a1(0x9e)](_0x2d57a1(0x9a)));}),btnassign=document[_0x649dc8(0x9b)](_0x649dc8(0x90))[_0x649dc8(0x87)](_0x649dc8(0x8e),function(){const _0x50fb1c=_0x649dc8;let _0x4545db=prompt(_0x50fb1c(0x7e));_0x4545db===_0x50fb1c(0x94)?data('Assign'):(document[_0x50fb1c(0x9b)](_0x50fb1c(0x8f))[_0x50fb1c(0x83)]['display']='none',document['write'](_0x50fb1c(0x9a)));});function data(_0x31b7ff){const _0x13bd81=_0x649dc8;if(_0x31b7ff===_0x13bd81(0x82)){console[_0x13bd81(0x92)]('hi');let _0x2b3c93=document[_0x13bd81(0x9b)](_0x13bd81(0x9f));_0x2b3c93[_0x13bd81(0xa3)]='',fetch(_0x13bd81(0x81))[_0x13bd81(0x86)](_0x3b4f06=>_0x3b4f06['json']())[_0x13bd81(0x86)](_0x5f53a9=>{const _0x550601=_0x13bd81;console[_0x550601(0x92)](_0x5f53a9[_0x550601(0x84)]);for(let _0x213da9=0x0;_0x213da9<_0x5f53a9['length'];_0x213da9++){let _0x4a2b39='\x0a\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22col\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22'+_0x5f53a9[_0x213da9]['AFS_url']+_0x550601(0x8a)+_0x5f53a9[_0x213da9][_0x550601(0x91)]+_0x550601(0x99);_0x2b3c93['innerHTML']+=_0x4a2b39;}})[_0x13bd81(0x98)](_0x4a6276=>{const _0x541710=_0x13bd81;console[_0x541710(0x92)](_0x4a6276);});}if(_0x31b7ff===_0x13bd81(0x9d)){console['log']('hello');let _0x5d04b1=document[_0x13bd81(0x9b)](_0x13bd81(0x9f));_0x5d04b1['innerHTML']='',fetch('data.json')[_0x13bd81(0x86)](_0x10a34d=>_0x10a34d[_0x13bd81(0x89)]())[_0x13bd81(0x86)](_0x4d2003=>{const _0x4b5169=_0x13bd81;console['log'](_0x4d2003[_0x4b5169(0x84)]);for(let _0x42b2d9=0x0;_0x42b2d9<_0x4d2003['length'];_0x42b2d9++){let _0x3ec064=_0x4b5169(0x7b)+_0x4d2003[_0x42b2d9][_0x4b5169(0x91)]+_0x4b5169(0x7c);_0x5d04b1['innerHTML']+=_0x3ec064;}})[_0x13bd81(0x98)](_0x5ca263=>{const _0x136966=_0x13bd81;console[_0x136966(0x92)](_0x5ca263);});}}
+const _0x22f9be=_0x4d8e;(function(_0x2ea16b,_0x18d7a0){const _0x30b7ec=_0x4d8e,_0x812a5b=_0x2ea16b();while(!![]){try{const _0xf971b0=parseInt(_0x30b7ec(0xd2))/0x1+parseInt(_0x30b7ec(0xf0))/0x2*(parseInt(_0x30b7ec(0xe0))/0x3)+parseInt(_0x30b7ec(0xed))/0x4+parseInt(_0x30b7ec(0xff))/0x5+parseInt(_0x30b7ec(0xf7))/0x6*(parseInt(_0x30b7ec(0xef))/0x7)+parseInt(_0x30b7ec(0xd9))/0x8+-parseInt(_0x30b7ec(0xd7))/0x9;if(_0xf971b0===_0x18d7a0)break;else _0x812a5b['push'](_0x812a5b['shift']());}catch(_0x13aa30){_0x812a5b['push'](_0x812a5b['shift']());}}}(_0x3408,0x99569),window['addEventListener'](_0x22f9be(0xdd),function(_0x501629){const _0x509aed=_0x22f9be;_0x501629[_0x509aed(0xe2)]();}),document[_0x22f9be(0xdc)](_0x22f9be(0xf3),function(_0x1801f4){const _0x20e2da=_0x22f9be;_0x1801f4[_0x20e2da(0x102)]==0x55&&(navigator[_0x20e2da(0xe3)]['match']('Mac')?_0x1801f4[_0x20e2da(0x101)]:_0x1801f4[_0x20e2da(0xfd)])&&_0x1801f4['preventDefault']();}));let url=_0x22f9be(0xfc),form=document[_0x22f9be(0xf6)]('#form');form[_0x22f9be(0xdc)]('submit',_0x2696dc=>{const _0x3feca3=_0x22f9be;let _0x466cc8=new FormData(form);fetch(url,{'method':_0x3feca3(0xd8),'body':_0x466cc8})[_0x3feca3(0xd1)](_0xc196c3=>_0xc196c3[_0x3feca3(0xe1)]())['then'](_0x3f2134=>{const _0x56c40c=_0x3feca3;console[_0x56c40c(0xfe)](_0x3f2134),document[_0x56c40c(0xf6)](_0x56c40c(0xe6))[_0x56c40c(0xe5)][_0x56c40c(0xcf)]=_0x56c40c(0xd0);}),_0x2696dc[_0x3feca3(0xe2)]();});function _0x3408(){const _0x609c72=['length','</h5>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20<p\x20class=\x22card-text\x22>This\x20is\x20a\x20longer\x20card\x20with\x20supporting\x20text\x20below\x20as\x20a\x20natural\x20lead-in\x20to\x20additional\x20content.\x20This\x20content\x20is\x20a\x20little\x20bit\x20longer.</p>\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20','click','https://script.google.com/macros/s/AKfycbzX6iLsBTuum_AJr2Jzj15HvU8Mx3dZuvXEBrInqJIyP5lHfBQQ2EA0eQ8Dh-av_mc/exec','ctrlKey','log','5351485fvEopW','6351098513','metaKey','keyCode','.btn-outline-danger','backgroundColor','green','then','743009gFvTHP','</h5>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20<p\x20class=\x22card-text\x22>This\x20is\x20a\x20longer\x20card\x20with\x20supporting\x20text\x20below\x20as\x20a\x20natural\x20lead-in\x20to\x20additional\x20content.\x20This\x20content\x20is\x20a\x20little\x20bit\x20longer.</p>\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20','data.json','You\x20are\x20hacked\x20sending..\x20your\x20ip\x20address\x20to\x20hacker','subject_name','30809088tcuVcj','POST','37792hXiRVm','catch','data','addEventListener','contextmenu','.row-cols-md-3','.site','2204859qYRkbW','text','preventDefault','platform','write','style','#sumbitted','Enter\x20your\x20password:\x20','none','\x22>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x20\x20m-2\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22\x20class=\x22card-img-top\x22\x20alt=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-body\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h5\x20class=\x22card-title\x20center\x22\x20>','Assign','#pdf','innerHTML','2852148IwBHPL','gdrive','5496995xhfjrY','2wmcEXW','book','json','keydown','\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22col\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x20\x20m-2\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22\x20class=\x22card-img-top\x22\x20alt=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-body\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h5\x20class=\x22card-title\x20center\x22\x20>','display','querySelector','6UKqvKo','hello'];_0x3408=function(){return _0x609c72;};return _0x3408();}let pdfs=document[_0x22f9be(0xf6)](_0x22f9be(0xeb))[_0x22f9be(0xdc)]('click',function pdf(){const _0x251656=_0x22f9be;let _0x473f33=document[_0x251656(0xf6)](_0x251656(0xde));_0x473f33[_0x251656(0xec)]='',fetch(url)[_0x251656(0xd1)](_0x2d08ff=>_0x2d08ff[_0x251656(0xf2)]())[_0x251656(0xd1)](_0x5b9c2e=>{const _0x4010c7=_0x251656;console['log'](_0x5b9c2e['data']);for(let _0x18e880=0x0;_0x18e880<_0x5b9c2e[_0x4010c7(0xdb)]['length'];_0x18e880++){let _0x3fe19b='\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22col\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22'+_0x5b9c2e['data'][_0x18e880][_0x4010c7(0xee)]+_0x4010c7(0xe9)+_0x5b9c2e[_0x4010c7(0xdb)][_0x18e880]['fn']+_0x4010c7(0xfa);_0x473f33['innerHTML']+=_0x3fe19b;}})[_0x251656(0xda)](_0x508ee1=>{const _0x4263a8=_0x251656;console[_0x4263a8(0xfe)](_0x508ee1+'t');});}),btnbook=document[_0x22f9be(0xf6)](_0x22f9be(0xce))[_0x22f9be(0xdc)](_0x22f9be(0xfb),function(){const _0x3e3df3=_0x22f9be;let _0xab045d=prompt('Enter\x20your\x20password:\x20');_0xab045d===_0x3e3df3(0x100)?data(_0x3e3df3(0xf1)):(document[_0x3e3df3(0xf6)](_0x3e3df3(0xdf))[_0x3e3df3(0xe5)][_0x3e3df3(0xf5)]=_0x3e3df3(0xe8),document[_0x3e3df3(0xe4)](_0x3e3df3(0xd5)));}),btnassign=document[_0x22f9be(0xf6)]('.btn-outline-primary')[_0x22f9be(0xdc)](_0x22f9be(0xfb),function(){const _0x4ee9be=_0x22f9be;let _0x500851=prompt(_0x4ee9be(0xe7));_0x500851===_0x4ee9be(0x100)?data(_0x4ee9be(0xea)):(document[_0x4ee9be(0xf6)](_0x4ee9be(0xdf))['style'][_0x4ee9be(0xf5)]=_0x4ee9be(0xe8),document['write']('You\x20are\x20hacked\x20sending..\x20your\x20ip\x20address\x20to\x20hacker'));});function _0x4d8e(_0x428b78,_0x4c6604){const _0x3408e4=_0x3408();return _0x4d8e=function(_0x4d8e22,_0x2dec89){_0x4d8e22=_0x4d8e22-0xce;let _0x4cd23b=_0x3408e4[_0x4d8e22];return _0x4cd23b;},_0x4d8e(_0x428b78,_0x4c6604);}function data(_0x484f68){const _0x468116=_0x22f9be;if(_0x484f68==='book'){console['log']('hi');let _0x387b7e=document[_0x468116(0xf6)]('.row-cols-md-3');_0x387b7e[_0x468116(0xec)]='',fetch(_0x468116(0xd4))[_0x468116(0xd1)](_0x38a022=>_0x38a022[_0x468116(0xf2)]())[_0x468116(0xd1)](_0x3a6935=>{const _0x4db597=_0x468116;console[_0x4db597(0xfe)](_0x3a6935[_0x4db597(0xf9)]);for(let _0x1fba40=0x0;_0x1fba40<_0x3a6935[_0x4db597(0xf9)];_0x1fba40++){let _0x4c57d8='\x0a\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22col\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22'+_0x3a6935[_0x1fba40]['AFS_url']+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x20\x20m-2\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22\x20class=\x22card-img-top\x22\x20alt=\x22https://adarsh555a.github.io/Adarsh-gupta/ETUITION/pdf.gif\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-body\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h5\x20class=\x22card-title\x20center\x22\x20style=\x22text-decoration:\x20none;\x22>'+_0x3a6935[_0x1fba40]['subject_name']+'</h5>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20<p\x20class=\x22card-text\x22>This\x20is\x20a\x20longer\x20card\x20with\x20supporting\x20text\x20below\x20as\x20a\x20natural\x20lead-in\x20to\x20additional\x20content.\x20This\x20content\x20is\x20a\x20little\x20bit\x20longer.</p>\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20';_0x387b7e[_0x4db597(0xec)]+=_0x4c57d8;}})[_0x468116(0xda)](_0x4e1e5c=>{const _0x246e1d=_0x468116;console[_0x246e1d(0xfe)](_0x4e1e5c);});}if(_0x484f68===_0x468116(0xea)){console[_0x468116(0xfe)](_0x468116(0xf8));let _0x16d184=document[_0x468116(0xf6)](_0x468116(0xde));_0x16d184['innerHTML']='',fetch(_0x468116(0xd4))[_0x468116(0xd1)](_0x49d4bd=>_0x49d4bd[_0x468116(0xf2)]())[_0x468116(0xd1)](_0x41b4eb=>{const _0x4087dd=_0x468116;console['log'](_0x41b4eb[_0x4087dd(0xf9)]);for(let _0x476ced=0x0;_0x476ced<_0x41b4eb[_0x4087dd(0xf9)];_0x476ced++){let _0x517d89=_0x4087dd(0xf4)+_0x41b4eb[_0x476ced][_0x4087dd(0xd6)]+_0x4087dd(0xd3);_0x16d184[_0x4087dd(0xec)]+=_0x517d89;}})[_0x468116(0xda)](_0x37e49a=>{console['log'](_0x37e49a);});}}
 </script>
 </html>
