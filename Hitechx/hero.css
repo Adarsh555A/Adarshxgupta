@@ -1,0 +1,524 @@
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 35vw;
+    overflow-y: hidden;
+        }
+        .heroimg img{
+            background-image: url('./img/Untitled-2.webp');
+            background-repeat: no-repeat;
+    
+            width: 35vw;
+            height: 26vw;
+            background-position: left 0 top -382px;
+            margin: 0px 30px 0px 0px;
+    
+    
+        }
+        .herohead{
+            font-family: 'Times New Roman', Times, serif;
+            word-break: break-all;
+            
+            
+        }
+        .herohead h2{
+            font-size: 3vw;
+            color: rgb(0, 0, 0);
+            margin: 0px 0px 0px 10px;
+    
+        }
+        .hi span{
+            font-family: Arial, Helvetica, sans-serif;
+            color: blueviolet;
+        }
+    
+    .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    }
+    .mySlides img{
+    border-radius: 5px;
+    
+    }
+    
+    .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+    background-color: rgba(255, 83, 212, 0.8);
+    }
+    
+    /* Caption text */
+    .text {
+    color: #f1ff71;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    }
+    .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    }
+    .auth{
+            width: 90vw;
+            height: 23vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .auth img{
+            width: 25vw;
+            height: 20vw;
+        }
+        .autho{
+            display: grid;
+        }
+        .autho p{
+            font-weight: bolder;
+            color: blueviolet;
+        }
+        .autho h1{
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: blue;
+        }
+       
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .heading {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #333;
+    }
+    
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-10px);
+    }
+    
+    .card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .card-content {
+        padding: 15px;
+    }
+    
+    .card h2 {
+        font-size: 1.5rem;
+        margin: 0 0 10px;
+        color: #333;
+    }
+    
+    .card p {
+        font-size: 1rem;
+        color: #666;
+    }
+    .Our-Review h1{
+        display: grid;
+        justify-content: center;
+        font-size: xx-large;
+    
+        }
+        .main{
+            width: 100%;
+            height: 30vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    .review{
+        width: 300px;
+        height: 200px;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    
+    }
+    .review img{
+        border-radius: 44%;
+    }
+    
+    .gallery-section {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .gallery-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    
+    .gallery-item {
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .gallery-item:hover {
+        transform: scale(1.05);
+    }
+    .navbar{
+        width: 100%;
+        height: 100px;
+        background-color: rgb(255 255 255);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .brand-title{
+        font-size: 3.5vw;
+    
+    }
+    .navbar-links{
+        display: flex;
+        justify-content: space-around;
+    }
+    .navbar-links li{
+        list-style: none;
+        text-decoration-line: none;
+        margin: 0px 20px;
+    
+    }
+    .navbar-links li a{
+        text-decoration: none;
+        font-size: 2vw;
+        font-family: cursive;
+        font-weight: bold;
+        color: black;
+    
+    }
+    
+    .contact-section {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .contact-section h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: #333;
+    }
+    
+    .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    
+    .contact-info, .contact-form {
+        flex: 1 1 45%;
+        min-width: 300px;
+    }
+    
+    .contact-info {
+        font-size: 1rem;
+    }
+    
+    .contact-info h2 {
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+        color: #555;
+    }
+    
+    .contact-info p {
+        margin: 10px 0;
+    }
+    
+    
+    
+    .contact-form {
+        font-size: 1rem;
+    }
+    
+    .contact-form label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    
+    .contact-form button {
+        background-color: #28a745;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .contact-form button:hover {
+        background-color: #218838;
+    }
+    iframe{
+        border: 0;
+        height: 100%;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    /* Modal Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .modal-content {
+        background-color: #fff;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .pop img{
+        width: 90%;
+        height: 80%;
+    
+    }
+    .footer {
+        background-color: #fff;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    .footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .footer-logo h2 {
+        font-size: 24px;
+        margin: 0;
+        color: #000;
+    }
+    
+    .footer-social-media {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .social-icon {
+        color: #000000;
+        font-size: 24px;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .social-icon:hover {
+        color: #3f3f3f;
+    }
+    
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #1d1d1d;
+    }
+     
+        @media only screen and (max-width: 600px) 
+            {
+    
+    .hero{
+        display: grid;
+        width: 98vw;
+        height: 80vw;
+    }
+    .heroimg img{
+        width: 88vw;
+        height: 47vw;
+    }
+    .herohead h2{
+        font-size: 9vw;
+    }
+    .auth{
+                display: grid;
+                height: 132vw;
+    
+               } 
+               .auth img{
+            width: 90vw;
+            height: 60vw;
+        }
+        .autho{
+            display: grid;
+            font-size: 29px;
+        }
+        .card h2 {
+            font-size: 1.25rem;
+        }
+    
+        .card p {
+            font-size: 0.9rem;
+        }
+       
+      
+        .main{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .review{
+            margin: 20px 0px;
+        }
+        .navbar{
+            display: flex;
+            justify-content: center;
+        }
+        .navbar-links {
+            position: absolute;
+            top: 60px;
+            right: 0px;
+            left: -33px;
+             flex-direction: row;
+            text-align: center; 
+       
+    }
+    .brand-title{
+        font-size: 5vw;
+    
+    }
+    .navbar-links li a{
+        font-size: 4vw;
+    
+    }
+    .contact-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .contact-info, .contact-form {
+            width: 100%;
+        }
+        iframe{
+        border: 0;
+        height: 100vw;
+    }
+    .modal-content {
+            width: 90%;
+        }
+        .footer .container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+    }
