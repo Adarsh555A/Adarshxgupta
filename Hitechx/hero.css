@@ -1,4 +1,100 @@
 
+
+.box_courses{
+    background-color: rgba(253, 253, 253, 0.63);
+    border: 2px dotted rgb(255, 0, 255);
+    }
+    .box_courses:hover{
+    transform: scale(1.2);
+    border: 1px double orange;
+    }
+    
+    .box {
+      /* background: linear-gradient(#e0f7ff73, #f1dbdf7a, #ffffe061); */
+    backdrop-filter: blur(15px);
+    /* box-shadow: 24px 9px 12px 1px #9b9b9ba8; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    }
+    
+    .blub{
+      position: absolute;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      z-index: 0;
+      /* background-color: rgb(252, 54, 242); */
+    }
+    .content{
+    /* width: 63vh; */
+    height: 63vh;
+    }
+.blob{
+
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 410px;
+  }
+  .blob2{
+  
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  }
+  .blob3{
+  
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 40%;
+    left: 890px;
+  
+    }
+    .blob4{
+  
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        }
+        .blob5{
+  
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            left: 890px;
+  
+            }
+            .blob6{
+  
+              position: absolute;
+              width: 500px;
+              height: 500px;
+              /* right: 890px; */
+  
+              }
+  .blob:nth-child(2){
+    filter: blur(50px);
+  }
+  .blob2:nth-child(2){
+    filter: blur(50px);
+  }
+  .blob3:nth-child(2){
+    filter: blur(50px);
+  }
+  .blob4:nth-child(2){
+    filter: blur(50px);
+  }
+  .blob5:nth-child(2){
+    filter: blur(50px);
+  }
+  .blob6:nth-child(2){
+  filter: blur(50px);
+  
+  }
+  
 .hero{
     display: flex;
     justify-content: center;
@@ -73,7 +169,7 @@
     
     /* Caption text */
     .text {
-    color: #fff;
+    color: #f1ff71;
     font-size: 30px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
