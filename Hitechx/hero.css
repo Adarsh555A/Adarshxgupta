@@ -1,5 +1,21 @@
 
-
+body{
+    cursor: url("./img/icons8-cursor-32.webp"),auto;
+  }
+  header:hover{
+    
+    cursor: url("./img/icons8-cursor-30.webp"),auto;
+  }
+::-moz-selection { /* Code for Firefox */
+    color: rgb(255, 255, 255);
+    background: pink;
+  }
+  
+  ::selection {
+    color: rgb(255, 255, 255);
+    background: pink;
+  }
+  
 .box_courses{
     background-color: rgba(253, 253, 253, 0.63);
     border: 2px dotted rgb(255, 0, 255);
@@ -17,7 +33,21 @@
     justify-content: center;
     align-items: center; */
     }
-    
+    .cursor{
+        z-index: 0;
+        position: fixed;
+        /* background-color: rgb(0, 204, 255); */
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .blobc{
+      
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
     .blub{
       position: absolute;
       display: grid;
@@ -94,7 +124,10 @@
   filter: blur(50px);
   
   }
-  
+  .navbar img{
+    width: 10vw;
+height: 15vw;
+}
 .hero{
     display: flex;
     justify-content: center;
@@ -123,12 +156,16 @@
         .herohead h2{
             font-size: 3vw;
             color: rgb(0, 0, 0);
+         
             margin: 0px 0px 0px 10px;
     
         }
         .hi span{
             font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
             color: blueviolet;
+    
+
         }
     
     .slideshow-container {
@@ -220,7 +257,8 @@
         text-align: center;
         font-size: 2.5rem;
         margin-bottom: 40px;
-        color: #333;
+        color: orangered;
+        -webkit-text-stroke: 0.5px #000000;
     }
     
     .card-grid {
@@ -265,6 +303,8 @@
         display: grid;
         justify-content: center;
         font-size: xx-large;
+        color: orangered;
+        -webkit-text-stroke: 0.5px #000000;
     
         }
         .main{
@@ -289,12 +329,14 @@
     .gallery-section {
         padding: 20px;
         text-align: center;
+        
     }
     
     .gallery-section h1 {
         font-size: 2.5rem;
         margin-bottom: 20px;
-        color: #333;
+        color: orangered;
+        -webkit-text-stroke: 0.5px #000000;
     }
     
     .gallery {
@@ -323,7 +365,7 @@
     .navbar{
         width: 100%;
         height: 100px;
-        background-color: rgb(255 255 255);
+        background-color: rgba(255, 255, 255, 0.301);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -345,23 +387,30 @@
     .navbar-links li a{
         text-decoration: none;
         font-size: 2vw;
-        font-family: cursive;
+        font-family: 'Times New Roman', Times, serif;
         font-weight: bold;
-        color: black;
+        color: rgb(255, 0, 0);
+        -webkit-text-stroke: 0.5px #000000;
     
     }
+    .navbar-links li a:hover{
+   background-color: #ffea3094;
+   border-radius: 8px;
     
+    }
     .contact-section {
         padding: 20px;
         max-width: 1200px;
         margin: 0 auto;
+        
     }
     
     .contact-section h1 {
         text-align: center;
         font-size: 2.5rem;
         margin-bottom: 30px;
-        color: #333;
+        color: orangered;
+        -webkit-text-stroke: 0.5px #000000;
     }
     
     .contact-container {
@@ -384,6 +433,8 @@
         margin-bottom: 15px;
         font-size: 1.8rem;
         color: #555;
+        color: orangered;
+        -webkit-text-stroke: 0.5px #000000;
     }
     
     .contact-info p {
@@ -501,7 +552,8 @@
     .footer-logo h2 {
         font-size: 24px;
         margin: 0;
-        color: #000;
+        color: red;
+        -webkit-text-stroke: 0.5px #000000;
     }
     
     .footer-social-media {
@@ -525,9 +577,60 @@
         font-size: 14px;
         color: #1d1d1d;
     }
+    .text{
+        color: #F5F5F5;
+        background-color: #9513ff;
+        border-radius: 17px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 61%;
+        margin-left: 16%;
+        text-align: center;
+        -webkit-text-stroke: 0.5px #000;
+    }
      
         @media only screen and (max-width: 600px) 
             {
+                .blob{
+
+                    position: absolute;
+                    width: 500px;
+                    height: 500px;
+                    left: 0px;
+                }
+                .blob3{
+              
+                    position: absolute;
+                    width: 500px;
+                    height: 500px;
+                    left: 0px;
+                }
+                .blob4{
+              
+                    position: absolute;
+                    width: 500px;
+                    height: 500px;
+                    top: 384vh;
+              
+                    left: 0px;
+                }
+                .blob5{
+              
+                    position: absolute;
+                    width: 500px;
+                    height: 500px;
+                    left: 0px;
+              
+                    }
+
+                    .navbar img{
+                        width: 22vw;
+    height: 29vw;
+                    }
     
     .hero{
         display: grid;
@@ -617,4 +720,18 @@
         .footer-logo {
             margin-bottom: 20px;
         }
+.text{
+        color: #F5F5F5;
+        background-color: #9513ff;
+        border-radius: 17px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 71%;
+        margin-left: 10%;
+        text-align: center;
     }
+}
