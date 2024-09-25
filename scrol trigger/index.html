@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>sCroll trigger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html,body{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+    }
+</style>
+<body>
+    <div class="w-full flex text-white text-center flex-col gap-4 items-center py-[15vh] pt-[15vh]">
+
+        <div class="card card1 sticky top-[15vh] flex flex-col w-[27vw] rounded-[20px] py-[15vh] px-[20px] gap-4 items-center bg-[brown]">
+
+        <img src="1.png" class="w-[180px] aspect-square" alt="">
+        <h1 class="text-4xl font-thin">
+            THE <br>
+            <span class="font-blod">Algorithms</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo necessitatibus incidunt.</p>
+    </div>
+    <div class="card card2 sticky top-[15vh] flex flex-col w-[27vw] rounded-[20px] py-[15vh] px-[20px] gap-4 items-center bg-[brown]">
+
+        <img src="2.png" class="w-[180px] aspect-square" alt="">
+        <h1 class="text-4xl font-thin">
+            THE <br>
+            <span class="font-blod">Algorithms</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo necessitatibus incidunt.</p>
+    </div>
+    <div class="card card3 sticky top-[15vh] flex flex-col w-[27vw] rounded-[20px] py-[15vh] px-[20px] gap-4 items-center bg-[brown]">
+
+        <img src="3.png" class="w-[180px] aspect-square" alt="">
+        <h1 class="text-4xl font-thin">
+            THE <br>
+            <span class="font-blod">Algorithms</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo necessitatibus incidunt.</p>
+    </div>
+    <div class="card card4 sticky top-[15vh] flex flex-col w-[27vw] rounded-[20px] py-[15vh] px-[20px] gap-4 items-center bg-[brown]">
+
+        <img src="4.png" class="w-[180px] aspect-square" alt="">
+        <h1 class="text-4xl font-thin">
+            THE <br>
+            <span class="font-blod">Algorithms</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo necessitatibus incidunt.</p>
+    </div>
+    <div class="card card5 sticky top-[15vh] flex flex-col w-[27vw] rounded-[20px] py-[15vh] px-[20px] gap-4 items-center bg-[brown]">
+
+        <img src="5.png" class="w-[180px] aspect-square" alt="">
+        <h1 class="text-4xl font-thin">
+            THE <br>
+            <span class="font-blod">Algorithms</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo necessitatibus incidunt.</p>
+    </div>
+    <div class="card card6 sticky top-[15vh] flex flex-col w-[27vw] rounded-[20px] py-[15vh] px-[20px] gap-4 items-center bg-[brown]">
+
+        <img src="6.png" class="w-[180px] aspect-square" alt="">
+        <h1 class="text-4xl font-thin">
+            THE <br>
+            <span class="font-blod">Algorithms</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo necessitatibus incidunt.</p>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+<script>
+document.querySelectorAll('.card').forEach(card =>{ 
+    gsap.to(card,{
+        scale:0.7,
+        opacity:0,
+        scrollTrigger:{
+            trigger:card,
+            start:"top 15%",//jab card ka top 15% aa jaye tab animation start karna
+            end:"bottom 15%",//jab card ka bottom 15% aa jaye tab animation end karna
+            scrub:true
+        }
+    })
+})
+</script>
+</html>
