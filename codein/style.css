@@ -1,5 +1,5 @@
-html,
-body {
+
+html,body {
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -161,6 +161,8 @@ backdrop-filter: blur( 4px );
 -webkit-backdrop-filter: blur( 4px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
+animation: anime 3s infinite alternate;
+
 }
 .popups:nth-child(2) {
     position: relative;
@@ -174,6 +176,8 @@ backdrop-filter: blur( 5px );
 -webkit-backdrop-filter: blur( 4px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
+animation: anime2 4s infinite alternate;
+
 }
 .popups:nth-child(3) {
     position: relative;
@@ -187,6 +191,8 @@ backdrop-filter: blur( 4px );
 -webkit-backdrop-filter: blur( 4px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
+animation: anime3 2.5s infinite alternate;
+
 }
 .popups:nth-child(1) img{
     width: 35px;
@@ -325,6 +331,21 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
    .pop-img-mix img:nth-child(5){
     left: 143px;
    }
+   .popups{
+    position: relative;
+}
+@keyframes anime {
+    from {top: 0vw;}
+    to {top: 0.7vw;}
+}
+@keyframes anime2 {
+    from {top: 28vw;}
+    to {top: 28.7vw;}
+}
+@keyframes anime3 {
+    from {top: 7vw;}
+    to {top: 7.7vw;}
+}
 .recuiters {
     width: 100%;
     height: 7vw;
@@ -555,10 +576,15 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     align-items: center;
     border-radius: 10%;
     overflow: hidden;
+    position: relative;
     box-shadow: 5px 5px rgba(128, 128, 128, 0.635);
+    animation: products 3s infinite alternate;
 
 }
-
+@keyframes products {
+    from {top: 0vw;}
+    to {top: 0.7vw;}
+}
 .products:nth-child(1) {
     margin: 0% 2% 0% 5%;
 }
@@ -947,6 +973,7 @@ body {
         position: absolute;
         z-index: 1;
     }
+    
     .popups:nth-child(1) {
         position: relative;
         width: 224px;
@@ -960,6 +987,7 @@ body {
         position: relative;
         left: 27px;
     }
+
     .pop-box {
         width: 100%;
         height: 100%;

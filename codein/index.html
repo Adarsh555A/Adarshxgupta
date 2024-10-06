@@ -13,7 +13,7 @@
         <!-- nav section -->
         <div class="navbar">
             <div class="navicon">
-                <img src="./image/logo.png" alt="">
+                <img src="./image/logo1.png" alt="">
 
             </div>
             <div class="navlink">
@@ -301,6 +301,56 @@
         el: document.querySelector('.main'),
         smooth: true
     });
+
+var gl = gsap.timeline();
+    gl.from(".navbar h2",{
+        y:-30,
+        opacity:0,
+        delay:0.5,
+        duration:1,
+        stagger:0.15
+    });
+    
+
+    gl.from(".navbar img",{
+        y:-30,
+        opacity:0,
+        delay:0.9,
+        duration:1,
+        stagger:0.15
+    })
+    gsap.from(".hero h1",{
+        x:-500,
+        opacity:0,
+        delay:0.9,
+        duration:1,
+        stagger:0.15
+    })
+    gsap.from(".heroleft p",{
+        x:-500,
+        opacity:0,
+        delay:1,
+        duration:1,
+        stagger:0.15
+    })
+    gsap.from(".heroleft button",{
+        x:-500,
+        opacity:0,
+        delay:1,
+        duration:1,
+        stagger:0.15
+    })
+
+    gl.from(".heroright",{
+        opacity:0,
+        duration:0.5,
+    },"-=0.5")
+
+    
+    
+
+
+    
 </script>
 
 </html>
