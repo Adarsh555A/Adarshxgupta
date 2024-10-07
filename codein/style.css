@@ -1431,7 +1431,7 @@ body {
 } 
 
 
- @media only screen and (min-width: 360px) and (max-width: 600px) {
+ @media only screen and (min-width: 300px) and (max-width: 600px) {
     .navlink a {
         margin-right: 0%;
         font-size: 2.4vw;
@@ -1442,19 +1442,39 @@ body {
 }
 .heroleft h1 {
     position: relative;
-    top:49%;
+    top: 34%;
 }
 .heroleft p {
     position: relative;
     top: 29%;
 }
+.dots {
+    width: 70vw;
+    height: 60vw;
+}
+.circle {
+    width: 67vw;
+    height: 57vw;
+}
+.circle img {
+    width: 89vw;
+    height: 45vh;
+}
     .courses {
         width: 100%;
-        height: 170vh;
+        height: 175vh;
+    }
+    .courses h1 {
+        font-size: 7vw;
+        padding-top: 19px;
+    }
+    .rightcourse h1 {
+        font-size: 5.6vw;
+        padding-bottom: 19px;
     }
     .product {
         width: 100%;
-        height: 200vh;
+        height: 216vh;
 }
 .products {
     width: 72%;
@@ -1462,7 +1482,19 @@ body {
 }
 .about {
     width: 100%;
-    height: 158vh;
+    height: 178vh;
+}
+.aboutimg {
+    width: 73%;
+    height: 73%;
+}
+.about-img-back {
+    width: 90%;
+    height: 90%;
+}
+.about-img-back img {
+    width: 105vw;
+    height: 100%;
 }
 .pop{
     display: none;
@@ -1477,54 +1509,215 @@ body {
     bottom: -10vw;
 }
 }
-/*
-  .navlink {
+
+@media only screen and (max-width: 320px) {
+    .hero {
         width: 100%;
-        display: flex;
-        justify-content: space-around;
+        height: 62vh;
     }
-    .navlink a {
-        margin-right: 0%;
-        font-size: 3vw;
+    .circle img {
+        width: 89vw;
+        height: 30vh;
     }
+.courses {
+        width: 100%;
+        height: 136vh;
+    }
+    .product {
+        width: 100%;
+        height: 139vh;
+    }
+.title-products h3 {
+    margin-left: 2.5%;
+}
+    .about {
+        width: 100%;
+        height: 111vh;
+    }
+       .Reviews {
+        width: 100%;
+        height: 92vh;
+}
+}
+
+@media only screen and (max-width: 428px) {
+    .product {
+        width: 100%;
+        height: 216vh;
+}
+.about {
+    width: 100%;
+    height: 168vh;
+}
+}
+
+@media only screen and (max-width: 390px) {
+    .hero {
+        width: 100%;
+        height: 110vh;
+}
+    .product {
+        width: 100%;
+        height: 216vh;
+}
+.about {
+    width: 100%;
+    height: 179vh;
+}
+}
+
+@media only screen and (max-width: 375px) {
+    .hero {
+        width: 100%;
+        height: 110vh;
+}
+.dots {
+    width: 60vw;
+    height: 50vw;
+}
+.circle {
+    width: 57vw;
+    height: 47vw;
+}
+.circle img {
+    width: 89vw;
+    height: 30vh;
+    position: relative;
+    top: 3.5vw;
+}
+.courses {
+    width: 100%;
+    height: 190vh;
+}
+    .product {
+        width: 100%;
+        height: 216vh;
+}
+.about {
+    width: 100%;
+    height: 179vh;
+}
+}
+@media only screen and (min-width: 428px) and (max-width: 926px) {
     .hero {
         width: 100%;
         height: 105vh;
 }
-.herobtn {
-    width: 61%;
-    height: 53px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 14.5vw;
-    position: relative;
-    bottom: -3vw;
+    .about {
+        width: 100%;
+        height: 169vh;
+    } 
 }
-.heroright{
-    overflow: hidden;
+
+@media only screen and (max-width: 414px){
+    .hero {
+        width: 100%;
+        height: 105vh;
 }
-.courses {
+    .about {
+        width: 100%;
+        height: 169vh;
+    } 
+}
+@media only screen and (max-width: 360px){
+    .hero {
+        width: 100%;
+        height: 96vh;
+}
+    .about {
+        width: 100%;
+        height: 159vh;
+    } 
+}
+
+
+@media only screen and (min-width: 360px) and (max-width: 880px) {
+    .hero {
+        width: 100%;
+        height: 88vh;
+}
+.product {
     width: 100%;
-    height: 186vh;
+    height: 218vh;
 }
+    .about {
+        width: 100%;
+        height: 145vh;
+    } 
+}
+
+@media only screen and (min-width: 360px) and (max-width: 780px) {
+    .dots {
+        width: 82%;
+        height: 93%;
+    }
+    .circle {
+        width: 96%;
+        height: 96%;
+    }
+    .circle img {
+        width: 89vw;
+        height: 35vh;
+        position: relative;
+        top: 3.5vw;
+    }
+    .circle img {
+        width: 98vw;
+        height: 34vh;
+    }
+
     .product {
         width: 100%;
-        height: 229vh;
-}
-.products {
-    width: 72%;
-    height: 117vw;
+        height: 216vh;
 }
 
 .about {
+    width: 100%;
+    height: 160vh;
+} 
+}
+@media only screen and (max-width: 412px){
+    .hero {
         width: 100%;
-        height: 173vh;
+        height: 93vh;
 }
-    .Reviews {
+.dots {
+    width: 80vw;
+    height: 70vw;
+}
+.circle {
+    width: 77vw;
+    height: 67vw;
+}
+.circle img {
+    width: 89vw;
+    height: 55vh;
+    position: relative;
+    top: 3.5vw;
+}
+}
+@media only screen and (max-width: 390px) {
+    .hero {
         width: 100%;
-        height: 121vh;
+        height: 93vh;
 }
-.pop{
-    display: none;
+    .about {
+        width: 100%;
+        height: 160vh;
+    } 
+    .dots {
+        width: 82%;
+        height: 93%;
+    }
+    .circle {
+        width: 96%;
+        height: 96%;
+    }
+    .circle img {
+        width: 89vw;
+        height: 40vh;
+        position: relative;
+        top: 3.5vw;
+    }
+    
 }
-} */
