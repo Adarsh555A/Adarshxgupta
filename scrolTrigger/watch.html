@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>watch</title>
+</head>
+<style>
+
+nav{
+    width: 100%;
+    background-color: #d6c6c6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #201e1e;
+
+}
+.navimg img{
+ width: 50px;
+ height: 50px;
+ /* it is for black background */
+ mix-blend-mode: color-burn;
+}
+.navcontent{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navcontent h2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.navcontent input{
+    width: 80%;
+    height: 100%;
+    outline: none;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border-radius:40px;
+    font-size: 1.5vw;
+    text-align: center;
+    background: transparent;
+}
+.navcontent form{
+    width: 15vw;
+    height: 6vh;
+    border: 2px solid black;
+    border-radius:40px;
+    background: linear-gradient(90deg,#d6c6c6, #8d7b7b);
+
+}
+.navcontent form i{
+    font-size: 1.5vw;
+}
+.content{
+    width: 100%;
+    height: 45.5vw;
+    display: flex;
+    align-content: center;
+    background: linear-gradient(#75624b, #a7a59a);
+}
+.watch{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.watch-img {
+    width: 70%;
+    height: 50%;
+}
+.watch-img img{
+    width: 100%;
+    height: 100%;
+   
+}
+.btns{
+width: 60%;
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+.dot{
+    width: 80px;
+    height: 80px;
+    background-color: #715c44;
+    border-radius:50%;
+}
+.btns .dot:nth-child(2) {
+    background-color: #16120f;
+    
+}
+.btns .dot:nth-child(3) {
+    background-color: #534a43;
+
+}
+.watch-content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+}
+.watch-content h2:nth-child(1){
+    color: #e37f25;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 2.1vw;
+    margin: 5px;
+}
+.watch-content h2:nth-child(2){
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 3vw;
+    margin: 5px;
+}
+.watch-content p{
+    width: 80%;
+    color: white;
+    font-family: system-ui;
+    font-size: 1.8vw;
+    text-align: center;
+    margin: 5px;
+}
+.btn{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+
+}
+.btn button:nth-child(1){
+    width: 28%;
+    height: 50px;
+    outline: none;
+    border: 0;
+    background-color: #e37f25;
+    color: white;
+    border-radius: 40px;
+    font-size: 1.6vw;
+    font-weight: bolder;
+ 
+}
+.btn button:nth-child(2){
+    width: 28%;
+    height: 50px;
+    outline: none;
+    border: 1px solid white;
+    background-color: transparent;
+    color: #e37f25;
+    border-radius: 40px;
+    font-size: 1.6vw;
+    font-weight: bolder;
+ 
+}
+</style>
+<body>
+        <nav>
+            <div class="navimg">
+                <img src="./watchimg/download.png" alt="">
+
+            </div>
+            <div class="navcontent">
+                <h2>Home</h2>
+                <h2>Watch</h2>
+                <h2>Order</h2>
+                <h2>Contact</h2>
+                <form >
+              <input type="text" name="" id="">
+              <i class="fa-solid fa fa-search"></i>
+            </form>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="watch">
+                <div class="watch-img">
+                  <img src="./watchimg/watch1.png" alt="">
+                </div>
+                <div class="btns">
+                    <div class="dot" onclick="color('golden')"></div>
+                    <div class="dot" onclick="color('brown')"></div>
+                    <div class="dot" onclick="color('black')"></div>
+
+                </div>
+            </div>
+            <div class="watch-content">
+             <h2>BRANDED</h2>
+             <h2>APPLE WATCH SERIES 10</h2>
+             <p>Series 10 is a major milestone for Apple Watch. It features our biggest and most advanced display showing more information onscreen than ever. With Apple's first wide-angle OLED Display, the screen is brighter when viewed from an angle, making it easier to read with a quick glance.</p>
+            <div class="btn">
+                <button>Price $199</button>
+                <button>GET NOW</button>
+            </div>
+            </div>
+        </div>
+</body>
+<script>
+    let arr = ["golden","brown","black"];
+   let content =  document.querySelector('.content');
+   let image = document.querySelector('.watch-img img');
+    function color(value)
+    {
+      if(value === arr[0])
+      {
+       content.style.background = "linear-gradient(#75624b, #a7a59a)";
+       image.src = "./watchimg/watch2.png";
+       image.style.height = '100%';
+
+       console.log("golden");
+
+
+      }
+      else if(value === arr[1])
+      {
+        content.style.background = "linear-gradient(#5a524b, #a7a59a)";
+        console.log("brown");
+        image.src = "./watchimg/watch1.png";
+        image.style.height = '100%';
+
+        
+      }
+      else{
+        content.style.background = "linear-gradient(#2b2b29, #a7a59a)";
+        console.log("black");
+        image.src = "./watchimg/watch3.png";
+        image.style.height = '125%';
+
+      }
+    }
+
+</script>
+</html>
