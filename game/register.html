@@ -10,7 +10,7 @@
  
   <body class="bg-gray-100 py-10">
     <div class="max-w-4xl mx-auto bg-white p-8 shadow-md rounded-lg" id="game-form">
-      <h1 class="text-2xl font-bold mb-6 text-gray-700">Team Registration Form</h1>
+      <h1 class="text-2xl font-bold mb-6 text-gray-700" id="header_gamer">Team Registration Form</h1>
       <form id="team-form" action="#" method="POST" class="space-y-6">
           <!-- Team Name -->
           <div>
@@ -176,7 +176,6 @@
      let form = document.querySelector('form');
       form.addEventListener("submit",(e)=>{
       let d = new FormData(form);
-      let data = JSON.stringify(Object.fromEntries(d.entries()));
       console.log(d)
  
       fetch(url,{
@@ -187,7 +186,7 @@
         console.log(finalres)
         alert("Form Submitted Successfully")
             localStorage.setItem('team-form',"done");
-            location.replace("index.html");
+            document.getElementById('header_gamer').innerHTML = "Form Submitted Successfully";        
             check();
          
        
@@ -200,7 +199,8 @@
       if(localStorage.getItem('team-form')==="done"){
         alert("You have already submitted the form");
         document.getElementById('team-form').style.display = "none";
-        location.replace("index.html");
+        document.getElementById('header_gamer').innerHTML = "Already Form Submitted Successfully";        
+
       }
      }
 
