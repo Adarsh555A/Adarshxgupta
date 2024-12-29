@@ -196,7 +196,7 @@
                               
                 </div>
                 <div>
-                  <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">Submit</button>
+                  <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300" id="submitting">Submit</button>
               </div>
                 </form>
                 </div>
@@ -213,7 +213,10 @@
       form.addEventListener("submit",(e)=>{
       let d = new FormData(form);
       console.log(d)
- 
+     let submitting = document.getElementById('submitting');
+        submitting.innerHTML = "Submitting...";
+        submitting.disabled = true;
+        submitting.style.backgroundColor = "gray";
       fetch(url,{
          method:'POST',
          body:d
