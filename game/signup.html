@@ -8,6 +8,74 @@
 
 </head>
 <body>
-    
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">Udhna Gamers</span>
+          </a>
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900">View</a>
+            <a class="mr-5 hover:text-gray-900">Payment Graph</a>
+        
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-5 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">OUR TEAM</h1>
+          </div>
+          <div class="flex flex-wrap -m-4" id="teams">
+
+
+           
+            
+          </div>
+        </div>
+      </section>
 </body>
+<script>
+         let url = "https://script.google.com/macros/s/AKfycbzGTSCUQ2ZzBPQnSMv1W3VN-rLVzzUbDgnOnIWv2Zf-Rr6Cfz7v1OHDNkBP1aCe048-HA/exec";
+   let teams = document.querySelector('#teams');
+fetch(url)
+  .then(response => response.text())
+  .then(async(data) => {
+
+ 
+    let net = JSON.parse(data);
+   //console.log(net.data[4]);
+
+    
+  for(let i=0;i<net.data.length;i++){
+    const elements = net.data[i];
+    let image  = net.data[i].image + "&export=view&authuser=0";
+
+
+
+    let cluster = `            <div class="p-4 lg:w-1/4 md:w-1/2">
+              <div class="h-full flex flex-col items-center text-center">
+                <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="data:image/jpeg;base64,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">
+                <div class="w-full">
+                  <h2 class="title-font font-medium text-lg text-gray-900">${elements.name}</h2>
+                  <h3 class="text-gray-500 mb-3">${elements.Address}</h3>
+                </div>
+              </div>
+            </div>`;
+            teams.innerHTML += cluster;
+    
+   }
+
+
+  })
+  .catch(error => console.error('Error:', error));
+
+</script>
 </html>

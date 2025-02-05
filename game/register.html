@@ -229,21 +229,37 @@
   
 </body>
   <script>
-     let url = "https://script.google.com/macros/s/AKfycbz4oHNqOX7lW4n9T7m1op29IE2xPRC9zleTWXrm6MPbSDRZwMsmlKLsygmMoVKE5SrJ/exec";
+     let url = "https://script.google.com/macros/s/AKfycbx-hVetQV9sa9pUNpsG9tg2CPQfzbKQNFid3iydyWNjOWsLar10JvSvweVmh32jdZPW/exec";
      
      
       check();
      let form = document.querySelector('form');
       form.addEventListener("submit",(e)=>{
       let d = new FormData(form);
-      console.log(d)
+      console.log(d);
+      const dataObject = Object.fromEntries(d.entries());
+ // Example JavaScript object
+
+
+// Create a new FormData object
+const formData = new FormData();
+
+// Loop through the object and append each key/value pair to the FormData
+for (let key in dataObject) {
+  if (dataObject.hasOwnProperty(key)) {
+    formData.append(key, dataObject[key]);
+  }
+}
+
+// Now you can send the formData in a POST request, for example using fetch or axios
+
      let submitting = document.getElementById('submitting');
         submitting.innerHTML = "Submitting...";
         submitting.disabled = true;
         submitting.style.backgroundColor = "gray";
       fetch(url,{
          method:'POST',
-         body:d
+         body:formData
       }).then((res)=>res.text())
       .then((finalres)=>{
         console.log(finalres);

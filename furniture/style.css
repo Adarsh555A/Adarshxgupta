@@ -1,0 +1,331 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background-color: #d47a42;
+    color: white;
+
+
+}
+.navbar{
+    position: fixed;  /* Fixes navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 5vw;
+    background-color: #e1a522;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 0 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;  /* Ensures it's above other elements */
+
+}
+.logo{
+    width: 3vw;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 40px;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+
+}
+nav ul{
+    display: flex;
+    padding: 0 10px;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0 10px;
+    font-weight: 800;
+}  
+.hero{
+  width: 100%;
+  min-height: 40vw;
+  display: flex;
+  padding: 5.7vw 10px;
+
+}
+.leftHero{
+    width: 50%;
+    height: 100%;
+}
+.leftHero img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.rightHero{
+    width: 50%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    text-align: center;
+    background-color: #b18d3f8a;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+}
+.products{
+    width: 100%;
+    min-height: 40vw;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    
+
+}
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers cards */
+    gap: 20px; /* Adds space between cards */
+    padding: 0;
+    text-align: center;
+}
+.products h1{
+    font-size: 5vw;
+    text-align: center;
+
+}
+.product{
+    width: 20%;
+    height: 20%;
+    background-color: #c08e22d8;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+
+}
+.product img{
+width: 100%;
+height: 100%;
+border-radius: 10px;
+
+}
+
+/* contact-section */
+.contact-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.contact-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: white;
+    -webkit-text-stroke: 0.5px #000000;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-info, .contact-form {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+.contact-info {
+    font-size: 1rem;
+}
+
+.contact-info h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #555;
+    color: white;
+    -webkit-text-stroke: 0.5px #000000;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+
+
+.contact-form {
+    font-size: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #218838;
+}
+iframe{
+    border: 0;
+    height: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* footer-section */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+    -webkit-text-stroke: 0.5px #000000;
+}
+
+.footer-social-media {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #000000;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #3f3f3f;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff;
+}
+@media only screen and (max-width: 600px) {
+    
+    .navbar{
+        flex-direction: column;
+
+    }
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .logo{
+        padding: 0;
+    }
+    .hero{
+        flex-direction: column;
+        padding: 35vw 10px;
+
+    }
+    .leftHero{
+        width: 100%;
+        height: 50%;
+    }
+
+    .rightHero{
+        width: 100%;
+        max-height: 50vw;
+        font-size: 13vw;
+    }
+    .products{
+        flex-direction: column;
+        overflow-x: hidden;
+        gap: 20px; /* Adds space between cards */
+        padding: 10px;
+
+    }
+    .products h1{
+        font-size: 13vw;
+        text-align: center;
+    
+    }
+    .product{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+    iframe{
+    border: 0;
+    height: 100vw;
+}
+.footer{
+    margin-left: 3vw;}
+.footer .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+}
