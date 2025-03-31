@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NearBook</title>
+</head>
+<style>
+    section{
+        width: 100%;
+        height: auto;
+    }
+    h1{
+        text-align: center;
+    }
+    .books{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .book{
+        width: 400px;
+        height: auto;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #c1b5b5;
+        border-radius: 5px;
+        text-align: center;
+    }
+    h2{
+        word-break: break-all;
+    }
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <section>
+        <h1>Books</h1>
+        <div class="books">
+        </div>
+    </section>
+</body>
+<script>
+    let books = document.querySelector(".books");
+    let h2 = document.querySelector("h1");
+    h2.innerHTML = "Loading...";
+
+    let cluster = ``;
+    let url = "https://script.google.com/macros/s/AKfycbwdEsttcsMzxnd1AbQ4MNQprFSAkUo-pVoYpDkqAYRxPASyqygZWp4sbgUgpOr5Ola1/exec";
+    fetch(url)
+  .then(response => response.json()) // Convert response to JSON
+  .then(data => {console.log(data)
+    h2.innerHTML = "Books";
+    for (let i = 1; i < data.data.length; i++) {
+        const book = data.data[i];
+        cluster += `
+        <div class="book">
+            <img src="https://thumbs.dreamstime.com/b/stack-vector-cartoon-books-bright-engaging-covers-animated-elements-such-as-bookmarks-glasses-perfect-327462516.jpg" alt="">
+            <h2>Book Title: ${book.title}</h2>
+            <p>Price: ${book.price}</p>
+            <p>Address: ${book.address}</p>
+        </div>`;
+    }
+    books.innerHTML = cluster; // Insert the generated HTML into the container
+
+  }) // Log the data
+  .catch(error => console.error('Error fetching data:', error)); // Handle errors
+</script>
+</html>

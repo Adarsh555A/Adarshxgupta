@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Text</title>
+    <!-- v5 -->
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #output {
+            margin-top: 20px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Image to Text (OCR)</h2>
+    <input type="file" id="imageInput" accept="image/*">
+    <p>Extracted Text:</p>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("imageInput").addEventListener("change", function (event) {
+            const imageFile = event.target.files[0];
+            console.log(imageFile);
+            document.getElementById("output").textContent = "Loading...";
+
+            if (!imageFile) return;
+
+            Tesseract.recognize(
+                imageFile,
+                'eng', // Language
+                {
+                    logger: m => console.log(m) // Log progress
+                }
+            ).then(({ data: { text } }) => {
+                document.getElementById("output").textContent = text;
+            }).catch(error => {
+                document.getElementById("output").textContent = "Error processing image!";
+                console.error(error);
+            });
+        });
+    </script>
+</body>
+
+</html>
