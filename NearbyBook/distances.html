@@ -6,7 +6,7 @@
     <title>Travel Time Calculator</title>
 </head>
 <body>
-    <h2>Distance & Travel Time to 21.1299, 72.8383</h2>
+    <h2>Distance & Travel Time to Adarsh</h2>
     <p id="distance">Calculating...</p>
     <p id="walking">Walking Time: --</p>
     <p id="driving">Driving Time: --</p>
@@ -40,7 +40,7 @@
                     let targetLon = 72.83830942744328;
 
                     let distance = getDistance(userLat, userLon, targetLat, targetLon).toFixed(2);
-                    let near = distance < 1 ? "You are near!" : "You are far away!";
+                    let near = distance < 1 ? "You are near to Adarsh!" : "You are far away from Adarsh!";
                 document.getElementById("distance").innerText = `Distance: ${distance} km (${near})`;
 
                     // Calculate walking and driving times
