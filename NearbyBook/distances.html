@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Time Calculator</title>
+</head>
+<body>
+    <h2>Distance & Travel Time to 21.1299, 72.8383</h2>
+    <p id="distance">Calculating...</p>
+    <p id="walking">Walking Time: --</p>
+    <p id="driving">Driving Time: --</p>
+
+    <script>
+        function getDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371; // Earth's radius in km
+            const dLat = (lat2 - lat1) * (Math.PI / 180);
+            const dLon = (lon2 - lon1) * (Math.PI / 180);
+            const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                      Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) * 
+                      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c; // Distance in km
+        }
+
+        function calculateTime(distance, speed) {
+            let time = distance / speed; // Time in hours
+            let hours = Math.floor(time);
+            let minutes = Math.round((time - hours) * 60);
+            return hours > 0 ? `${hours}h ${minutes}m` : `${minutes} min`;
+        }
+
+        function calculateDistanceAndTime() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(position => {
+                    let userLat = position.coords.latitude;
+                    let userLon = position.coords.longitude;
+
+                    let targetLat = 21.12992252596269;
+                    let targetLon = 72.83830942744328;
+
+                    let distance = getDistance(userLat, userLon, targetLat, targetLon).toFixed(2);
+                    let near = distance < 1 ? "You are near!" : "You are far away!";
+                document.getElementById("distance").innerText = `Distance: ${distance} km (${near})`;
+
+                    // Calculate walking and driving times
+                    let walkingTime = calculateTime(distance, 5);  // Walking speed ≈ 5 km/h
+                    let drivingTime = calculateTime(distance, 50); // Driving speed ≈ 50 km/h
+
+                    document.getElementById("walking").innerText = `Walking Time: ${walkingTime}`;
+                    document.getElementById("driving").innerText = `Driving Time: ${drivingTime}`;
+                }, () => {
+                    document.getElementById("distance").innerText = "Location access denied.";
+                });
+            } else {
+                document.getElementById("distance").innerText = "Geolocation not supported.";
+            }
+        }
+
+        calculateDistanceAndTime();
+    </script>
+</body>
+</html>
