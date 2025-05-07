@@ -6,21 +6,21 @@
     <title>NearBook</title>
 </head>
 <style>
-    section{
+    .books-section{
         width: 100%;
         height: auto;
     }
-    h1{
+   .books-section h1{
         text-align: center;
     }
-    .books{
+    .books-section .books{
         width: 100%;
         height: auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .book{
+    .books-section .book{
         width: 400px;
         height: auto;
         margin: 10px;
@@ -29,19 +29,25 @@
         border-radius: 5px;
         text-align: center;
     }
-    h2{
+    .books-section h2{
         word-break: break-all;
     }
-    img{
+    .books-section img{
         width: 100%;
         height: auto;
         border-radius: 5px;
     }
 </style>
 <body>
-    <section>
+    <section class="books-section">
         <h1>Books</h1>
         <div class="books">
+            <div class="book">
+                <img src="https://thumbs.dreamstime.com/b/stack-vector-cartoon-books-bright-engaging-covers-animated-elements-such-as-bookmarks-glasses-perfect-327462516.jpg" alt="">
+                <h2>Book Title: ${book.title}</h2>
+                <p>Price: ${book.price}</p>
+                <p>Address: ${book.address}</p>
+            </div>
         </div>
     </section>
 </body>
