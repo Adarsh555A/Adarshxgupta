@@ -272,6 +272,7 @@ nav a {
 .projects-content p {
     width: 38%;
     word-spacing: 10px;
+    font-family: 'poppins';
 }
 
 
@@ -302,6 +303,7 @@ nav a {
 
 .about-content p {
     width: 70%;
+    font-family: 'poppins';
     margin-inline: auto;
     padding: 20px;
     word-spacing: 10px;
