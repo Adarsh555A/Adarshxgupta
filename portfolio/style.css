@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: "Playlist-Script";
+    src: url("https://db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.eot");
+    src: url("https://db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/1fed4454352f201d52b65ca5480afb2d.svg#Playlist-Script")format("svg");
+}
+
+:root {
+    --main-bg-color: #000000;
+    --main-text-color: #ffffff;
+    --contact-bg-color: #262626;
+    --contact-text-color: #d0cdcd;
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 1.3rem;
+    background-color: var(--main-bg-color);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    position: fixed;
+    z-index: 9;
+}
+
+header h1 {
+    font-size: 1.4em;
+    color: #FFA800;
+    font-family: 'Anton';
+    font-weight: 100;
+    margin: 30px;
+}
+
+nav {
+    width: 70%;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--main-text-color);
+    font-family: 'Poppins';
+    margin-inline: 50px;
+}
+
+
+.menus {
+    display: none;
+    font-size: 2em;
+    color: var(--main-text-color);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#hamburger {
+    display: none;
+}
+
+
+.toggle-wrapper {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-label {
+    width: 80px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: orange;
+    position: relative;
+    transition: background-color 1s;
+
+}
+
+.toggle-label::after {
+    content: "";
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background-color: rgb(37, 35, 35);
+    transition: transform 1s;
+
+}
+
+.toggle-label .fa-sun {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    z-index: 9;
+    color: orange;
+    overflow: hidden;
+}
+
+.toggle-label .fa-moon {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    z-index: 10;
+    color: orange;
+    overflow: hidden;
+}
+
+#toggle {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+#toggle:checked+.toggle-label::after {
+    background-color: orange;
+    transform: translateX(40px);
+}
+
+#toggle:checked+.toggle-label {
+    background-color: rgb(165, 163, 163);
+}
+
+#toggle:checked+.toggle-label .fa-sun {
+    color: rgb(37, 35, 35);
+}
+
+#toggle:checked+.toggle-label .fa-moon {
+    color: rgb(165, 163, 163);
+}
+
+.hero {
+    width: 100%;
+    min-height: 90vh;
+    background-color: var(--main-bg-color);
+    margin-top: 17vh;
+    opacity: 0;
+
+}
+
+.hero-content {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    word-break: break-all;
+
+}
+
+.hero h2 {
+    font-size: 4.4em;
+    font-family: 'Playlist-Script';
+    color: #FFA800;
+    font-weight: 100;
+    rotate: -10deg;
+    position: absolute;
+    top: 3%;
+    left: 40%;
+}
+
+.hero h1 {
+    font-size: 14.4em;
+    font-weight: 100;
+    color: var(--main-text-color);
+    font-family: 'Anton';
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5, #00ddeb, #ff6ec4, #ffffff);
+    background-size: 400%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientShift 10s linear alternate infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 400% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.hero img {
+    height: 80%;
+    position: absolute;
+    z-index: 3;
+
+    top: 20%;
+    left: 25%;
+    filter: saturate(2) grayscale(2);
+}
+
+
+
+.hero-title {
+    color: var(--main-text-color);
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    font-family: 'poppins';
+    font-size: 0.8em;
+    font-weight: 100;
+}
+
+
+.project {
+    width: 100%;
+    min-height: 70vh;
+    background-color: var(--main-bg-color);
+    padding-bottom: 10vh;
+
+}
+
+.projects {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projects img {
+    width: 380px;
+    height: 280px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.projects-content {
+    width: 100%;
+    color: var(--main-text-color);
+    display: flex;
+    align-items: center;
+}
+
+
+.projects-content h2 {
+    width: 62%;
+    font-size: 4.4em;
+    font-family: 'Anton';
+    font-weight: 100;
+}
+
+.projects-content p {
+    width: 38%;
+    word-spacing: 10px;
+}
+
+
+
+
+.about {
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    padding-bottom: 10vh;
+}
+
+.about-content {
+    width: 100%;
+    /* text-align: center; */
+    padding: 30px;
+}
+
+.about-content h2 {
+    width: 68%;
+    font-size: 3.4em;
+    font-family: 'Anton';
+    font-weight: 100;
+    margin-inline: auto;
+}
+
+.about-content p {
+    width: 70%;
+    margin-inline: auto;
+    padding: 20px;
+    word-spacing: 10px;
+}
+
+.about-content .btn {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #FFA800;
+    margin-left: 90px;
+    font-family: 'poppins';
+    color: var(--main-bg-color);
+    margin-block: 10px;
+}
+
+.about-content .btn i {
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--main-bg-color);
+    color: #FFA800;
+}
+
+.about-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.about img {
+    width: 70%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+
+.contact {
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+
+.contact-content {
+    width: 100%;
+    /* text-align: center; */
+    padding: 30px;
+}
+
+.contact-content h2 {
+    width: 70%;
+    font-size: 3.4em;
+    font-family: 'Anton';
+    font-weight: 100;
+    margin-inline: auto;
+}
+
+.contact-content p {
+    width: 70%;
+    margin-inline: auto;
+    padding: 20px;
+    word-spacing: 10px;
+    font-family: 'poppins';
+}
+
+.contact-content .contact-details {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.contact-details .details {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    font-family: 'poppins';
+
+}
+
+.contact-details .details i {
+    font-size: 1.2em;
+    padding: 7px;
+    border-radius: 20%;
+    background-color: #FFA800;
+    color: var(--main-bg-color);
+    margin-right: 10px;
+}
+
+.contact-details .details .Left-detail h3 {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-details .details .Left-detail span {
+    font-size: 0.7em;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.contact-inputs input,
+.contact-inputs textarea {
+    width: 90%;
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+    font-family: 'poppins';
+    font-size: 0.7em;
+    background-color: var(--contact-bg-color);
+    color: var(--contact-text-color);
+    border-bottom: 2px solid #FFA800;
+    outline: none;
+    align-self: center;
+}
+
+.contact-inputs button {
+    width: 30%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FFA800;
+    color: var(--main-bg-color);
+    font-family: 'poppins';
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bolder;
+    transition: all 0.s ease;
+    margin-left: 23px;
+}
+
+.contact-inputs button:hover {
+    background-color: var(--main-bg-color);
+    color: #FFA800;
+    border: 2px solid #FFA800;
+}
+
+
+
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: 'poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: 100;
+}
+
+footer h3 {
+    padding: 10px;
+}
+
+footer i {
+    font-size: 1.4em;
+    color: red;
+    overflow: hidden;
+    animation: beats 0.4s linear infinite;
+}
+
+@keyframes beats {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.show {
+    opacity: 1;
+    animation: fade 3s linear alternate;
+}
+
+@keyframes fade {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.shake {
+    animation: shake linear alternate-reverse 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(2px, 2px) rotate(2deg);
+    }
+
+    20% {
+        transform: translate(3px, 1px) rotate(-2deg);
+    }
+
+    30% {
+        transform: translate(1px, -1px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(-1px, 1px) rotate(2deg);
+    }
+
+    50% {
+        transform: translate(-2px, -1px) rotate(-2deg);
+    }
+
+    60% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(2px, 1px) rotate(2deg);
+    }
+
+    80% {
+        transform: translate(1px, -1px) rotate(-2deg);
+    }
+
+    90% {
+        transform: translate(-1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -1px) rotate(-2deg);
+    }
+}
+
+/* 
+@media (max-width: 600px) {
+    
+} */

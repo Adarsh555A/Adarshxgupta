@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburger Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+      padding: 15px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #FFA800;
+      font-size: 1.5em;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #FFA800;
+    }
+
+    /* hidden checkbox */
+    #menu {
+      display: none;
+    }
+
+    /* hamburger icon */
+    .menus {
+      display: none;
+      font-size: 2em;
+      cursor: pointer;
+      color: white;
+    }
+
+    /* responsive styles */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        padding: 15px 0;
+      }
+
+      #menu:checked ~ nav {
+        display: flex;
+      }
+
+      .menus {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AR Gupta</h1>
+
+    <!-- hidden checkbox -->
+    <input type="checkbox" id="menu">
+
+    <!-- label for checkbox (hamburger icon) -->
+    <label for="menu" class="menus">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <!-- navigation -->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#project">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main style="margin-top:100px; padding:20px;">
+    <h2>Welcome!</h2>
+    <p>This is a demo of a pure HTML + CSS hamburger menu.</p>
+  </main>
+</body>
+</html>

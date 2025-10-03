@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .toggle-label {
+        width: 100px;
+        height: 50px;
+        border-radius: 40px;
+        background-color: orange;
+        position: relative;
+        transition: background-color 1s;
+
+    }
+
+    .toggle-label::after {
+        content: "";
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 3px;
+        background-color: rgb(37, 35, 35);
+        transition: transform 1s;
+
+    }
+
+    #toggle {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    #toggle:checked+.toggle-label::after {
+        background-color: orange;
+        transform: translateX(49px);
+    }
+
+    #toggle:checked+.toggle-label {
+        background-color: rgb(37, 35, 35);
+    }
+</style>
+
+<body>
+    <input type="checkbox" name="toggle" id="toggle" value="theme-toggle">
+    <label for="toggle" class="toggle-label"></label>
+</body>
+
+</html>

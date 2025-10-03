@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 740px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My PortFolio</title>
+</head>
+
+<body>
+    <header>
+        <h1>AR Gupta</h1>
+
+        <a href="#"><input type="checkbox" style="display: none;" id="menu"></a>
+        <label for="menu" class="menus"><i class="fa-solid fa-bars"></i></label>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#project">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+
+
+        <div class="toggle-wrapper">
+            <input type="checkbox" name="toggle" id="toggle" value="theme-toggle">
+            <label for="toggle" class="toggle-label"><i class="fa-solid fa-sun"></i> <i
+                    class="fa-solid fa-moon"></i></label>
+        </div>
+
+
+        <nav id="hamburger">
+            <a href="#">Home</a>
+            <a href="#project">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h2>Creative</h2>
+            <h1>PORTFOLIO</h1>
+            <img src="./img/spiderman_0013.png" class="shake" alt="model-image">
+
+        </div>
+        <div class="hero-title">
+            <h3>Creative Portfolio Presentation</h3>
+            <h3>Presented By: Gupta Adarsh</h3>
+        </div>
+
+    </section>
+
+    <section class="project" id="project">
+        <div class="projects">
+            <img src="./img/tom-holland-1.jpg" alt="project-1">
+            <img src="./img/tom-holland-1.jpg" alt="project-2">
+            <img src="./img/tom-holland-1.jpg" alt="project-3">
+        </div>
+        <div class="projects-content">
+            <h2>PROJECT PORTFOLIO</h2>
+            <p>This article is about the main and original version of the superhero. For other uses, see Spider-Man
+                (disambiguation). For other versions, see List of incarnations of Spider-Man and Alternative versions of
+                Spider-Man.</p>
+        </div>
+    </section>
+
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>ABOUT ME</h2>
+            <p>Spider-Man is a superhero in American comic books published by Marvel Comics. Created by writer-editor
+                Stan Lee and artist Steve Ditko, he first appeared in the anthology comic book Amazing Fantasy #15
+                (August 1962) in the Silver Age of Comic Books. Considered one of the most popular and commercially
+                successful superheroes.</p>
+            <div class="btn">
+                Learn More <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+        <div class="about-image">
+            <img src="./img/download.jpeg" alt="">
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2>Get in TOUCH</h2>
+            <p>Spider-Man, also known as Peter Parker, lived at 20 Ingram Street, Forest Hills, Queens, New York. This
+                address, confirmed in a 1989 comic book, has since become synonymous with Spider-Man.</p>
+            <div class="contact-details">
+                <div class="details">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div class="Left-detail">
+                        <h3>Email</h3>
+                        <span>adarshgupta555a@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="Left-detail">
+                        <h3>Social Media</h3>
+                        <span>@ultronjarvisfriday</span>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <i class="fa-solid fa-globe"></i>
+                    <div class="Left-detail">
+                        <h3>Website</h3>
+                        <span>arindustry</span>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <i class="fa-solid fa-phone"></i>
+                    <div class="Left-detail">
+                        <h3>Phone Number</h3>
+                        <span>6351098513</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="contact-inputs">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <input type="tel" placeholder="Your Phone Number">
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <button>Submit</button>
+        </div>
+    </section>
+
+    <footer>
+        <i class="fa-solid fa-heart"></i>
+        <h3> MADE BY GUPTA ADARSH</h3>
+    </footer>
+</body>
+<script>
+    let menu = document.querySelector("#menu");
+    let icon = document.querySelector(".menus i");
+    let nav = document.querySelector("#hamburger");
+    const toggle = document.getElementById("toggle");
+    const root = document.documentElement;
+    let siperman = document.querySelector(".hero img");
+
+    menu.onclick = () => {
+        icon.classList.toggle("fa-xmark");
+        nav.classList.toggle("open");
+    }
+    document.querySelectorAll("section").forEach(sec => {
+        sec.onclick = () => {
+            nav.classList.remove("open");
+        }
+    });
+
+    nav.onclick = () => {
+        nav.classList.remove("open");
+        icon.classList.remove("fa-xmark");
+    }
+
+
+
+    toggle.addEventListener("change", () => {
+        if (toggle.checked) {
+            // Light theme
+            setTimeout(() => {
+                siperman.src = "./img/spiderman_0013.png";
+                root.style.setProperty("--main-bg-color", "#ffffff");
+                root.style.setProperty("--main-text-color", "#000000");
+                root.style.setProperty("--contact-bg-color", "#d0cdcd");
+                root.style.setProperty("--contact-text-color", "#262626");
+                siperman.style.filter = "saturate(2) grayscale(0)";
+            }, 600);
+        } else {
+            // Dark theme
+            setTimeout(() => {
+                root.style.setProperty("--main-bg-color", "#000000");
+                root.style.setProperty("--main-text-color", "#ffffff");
+                root.style.setProperty("--contact-bg-color", "#262626");
+                root.style.setProperty("--contact-text-color", "#d0cdcd");
+                siperman.style.filter = "saturate(2) grayscale(2)";
+            }, 600);
+        }
+    });
+
+
+    let observe = new IntersectionObserver((entries) => {
+        entries.forEach((ent) => {
+            if (ent.isIntersecting) {
+                ent.target.classList.add("show");
+                console.log(ent.target)
+            } else {
+                ent.target.classList.remove("show");
+            }
+        })
+    })
+
+    let hiddenElements = document.querySelectorAll("body > section");
+    hiddenElements.forEach((el) => observe.observe(el));
+</script>
+
+</html>

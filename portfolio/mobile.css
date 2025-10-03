@@ -1,0 +1,120 @@
+header{
+    overflow: visible;
+}
+nav {
+    display: none;
+}
+
+.menus {
+    display: block;
+}
+
+.menus i {
+    padding: 10px;
+}
+
+#menu {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+#hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(37, 35, 35, 0.612);
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(-100%);
+    z-index: 10;
+}
+
+#hamburger a {
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#hamburger.open {
+    transform: translateY(0);
+}
+
+.hero {
+    margin-top: 11vh;
+}
+
+.hero h2 {
+    font-size: 2.4em;
+}
+
+
+.hero h1 {
+    font-size: 8.6em;
+}
+
+.hero img {
+    height: 80%;
+    left: -54%;
+
+}
+
+.hero-title {
+    text-align: center;
+}
+
+
+
+.projects-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-left: 10px;
+}
+
+.projects-content h2 {
+    width: 100%;
+}
+
+.projects-content p {
+    width: 100%;
+}
+
+
+.about {
+    flex-direction: column-reverse;
+}
+.about-content {
+    width: 100%;
+    /* text-align: center; */
+    padding: 5px;
+}
+
+.about-content h2,.about-content p {
+    width: 100%;
+    /* padding: 5px; */
+    margin-inline: auto;
+    word-break: break-all;
+
+}
+
+.contact {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contact-content .contact-details {
+    justify-content: center;
+}
+
+
+.contact-content h2,.contact-content p {
+    width: 100%;
+}
